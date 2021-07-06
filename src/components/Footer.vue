@@ -67,7 +67,9 @@
                 <!-- fine main nav footer -->
 
                 <!-- logo main footer -->
-                <div class="logo"></div>
+                <div class="logo">
+                    <img src="../assets/img/dc-logo-bg.png" alt="logo dc bg">
+                </div>
                 <!-- fine logo main footer -->
 
             </div>
@@ -77,6 +79,23 @@
         <!-- inizio bottom footer -->
         <div class="main-bottom">
             <div class="container bottom-footer">
+
+                <!-- inizio footer bottom left -->
+                <div class="left">
+                    Sign-up now!
+                </div>
+                <!-- fine footer bottom left -->
+
+
+                <!-- inizio footer bottom right -->
+                <div class="right">
+                    <div class="blue">Follow us</div>
+                    <div class="social" v-for="(item,index) in social" :key="index">
+                        <!-- <a :href="item.link"> {{item.text}} </a> -->
+                        <img :src="item.src" :alt="item.alt">
+                    </div>
+                </div>
+                <!-- fine footer bottom right -->
 
 
             </div>
@@ -127,116 +146,144 @@ export default {
                
             ],
 
-            dcComics : [
+            dcComics: [
                 {
-                    text : 'Characters',
-                    link : '#'
+                    text: 'Characters',
+                    link: '#'
                 },
                 {
-                    text : 'Comics',
-                    link : '#'
+                    text: 'Comics',
+                    link: '#'
                 },
                 {
-                    text : 'Movies',
-                    link : '#'
+                    text: 'Movies',
+                    link: '#'
                 },
                 {
-                    text : 'TV',
-                    link : '#'
+                    text: 'TV',
+                    link: '#'
                 },
                 {
-                    text : 'Games',
-                    link : '#'
+                    text: 'Games',
+                    link: '#'
                 },
                 {
-                    text : 'Videos',
-                    link : '#'
+                    text: 'Videos',
+                    link: '#'
                 },
                 {
-                    text : 'News',
-                    link : '#'
+                    text: 'News',
+                    link: '#'
                 }
             ],
                 
-            shop : [
+            shop: [
                 {
-                    text : 'Shop DC',
-                    link : '#'
+                    text: 'Shop DC',
+                    link: '#'
                 },
                 {
-                    text : 'Shop DC Collectibles',
-                    link : '#'
+                    text: 'Shop DC Collectibles',
+                    link: '#'
                 }
             ],
                 
             dc: [
                 {
-                    text : 'Terms Of Use',
-                    link : '#'
+                    text: 'Terms Of Use',
+                    link: '#'
                 },
                 {
-                    text : 'Privacy policy (New)',
-                    link : '#'
+                    text: 'Privacy policy (New)',
+                    link: '#'
                 },
                 {
-                    text : 'Ad Choices',
-                    link : '#'
+                    text: 'Ad Choices',
+                    link: '#'
                 },
                 {
-                    text : 'Advertising',
-                    link : '#'
+                    text: 'Advertising',
+                    link: '#'
                 },
                 {
-                    text : 'Jobs',
-                    link : '#'
+                    text: 'Jobs',
+                    link: '#'
                 },
                 {
-                    text : 'Subscriptions',
-                    link : '#'
+                    text: 'Subscriptions',
+                    link: '#'
                 },
                 {
-                    text : 'Talent Workshops',
-                    link : '#'
+                    text: 'Talent Workshops',
+                    link: '#'
                 },
                 {
-                    text : 'CPSC Certificates',
-                    link : '#'
+                    text: 'CPSC Certificates',
+                    link: '#'
                 },
                 {
-                    text : 'Rating',
-                    link : '#'
+                    text: 'Rating',
+                    link: '#'
                 },
                 {
-                    text : 'Shop Help',
-                    link : '#'
+                    text: 'Shop Help',
+                    link: '#'
                 },
                 {
-                    text : 'Contact Us',
-                    link : '#'
+                    text: 'Contact Us',
+                    link: '#'
                 }
             ],
                 
-            sites : [
+            sites: [
                 {
-                    text : 'DC',
-                    link : '#'
+                    text: 'DC',
+                    link: '#'
                 },
                 {
-                    text : 'MAD Magazine',
-                    link : '#'
+                    text: 'MAD Magazine',
+                    link: '#'
                 },
                 {
-                    text : 'DC Kids',
-                    link : '#'
+                    text: 'DC Kids',
+                    link: '#'
                 },
                 {
-                    text : 'DC Universe',
-                    link : '#'
+                    text: 'DC Universe',
+                    link: '#'
                 },
                 {
-                    text : 'DC Power Visa',
-                    link : '#'
+                    text: 'DC Power Visa',
+                    link: '#'
                 }
+            ],
+
+            social: [
+                {
+                    src: '../assets/img/footer-facebook.png',
+                    link: '#',
+                    alt: 'facebook logo'
+                },
+                {
+                    src: '../assets/img/footer-twitter.png',
+                    link: '#',
+                    alt: 'twitter logo'
+                },
+                {
+                    src: '../assets/img/footer-youtube.png',
+                    link: '#',
+                    alt: 'youtube logo'
+                },
+                {
+                    src: '../assets/img/footer-pinterest.png',
+                    link: '#',
+                    alt: 'pinterest logo'
+                },
+                {
+                    src: '../assets/img/footer-periscope.png',
+                    link: '#',
+                    alt: 'periscope logo'
+                },
             ]
                 
 
@@ -251,6 +298,7 @@ export default {
 .main-top{
     background-color: $blue-dc;
     height: $std-height;
+    
 
     .footer-top {
         height: 100%;
@@ -278,12 +326,17 @@ export default {
 
 .main-main-footer {
     background-image: url("../assets/img/footer-bg.jpg");
-    height: 450px; //! da togliere
+    height: 400px; //! da togliere
     color: white;
     display: flex;
 
+
         .main-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             height: 100%;
+            overflow: hidden;
 
             nav {
                 height: 100%;
@@ -318,12 +371,49 @@ export default {
                 }
 
             }
+
         }
 }
 
 .main-bottom {
     height: $std-height;
     background-color: $grey-dc;
+    display: flex;
+    align-items: center;
+
+    .bottom-footer{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .left {
+            text-transform: uppercase; 
+            color: white;
+            padding: 15px;
+            display: inline-block;
+            border: 3px solid $blue-dc;
+        }
+    
+        .right {
+            display: flex;
+            justify-content: flex-end;
+    
+            .blue{
+                color: $blue-dc;
+                padding: 10px;
+            }
+
+            .social {
+                padding: 10px;
+            }
+    }
+}
+        
+
+
+
+
 }
 
 </style>
