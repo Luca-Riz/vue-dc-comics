@@ -2,10 +2,11 @@
     <footer>
         <div class="container footer">
             <ul>
-                <!-- <li v-for="(link,index) in links" :key="index" :class="{ active: link.current }"><a :href="link.url">{{ link.text }} </a></li> -->
-                <!-- oppure -->
-                <li v-for="(link,index) in links" :key="index"><a :href="link.url">{{ link.text }} </a></li>
-                </ul>
+                <li v-for="(link,index) in links" :key="index">
+                    <img :src="link.src" alt="#">
+                    <a :href="link.url"> {{ link.text }} </a>
+                </li>
+            </ul>
         </div>
     </footer>
 </template>
@@ -19,27 +20,32 @@ export default {
                 {
                     text: 'Digital comics',
                     url: '#',
-                    current: false
+                    current: false,
+                    src: '../assets/img/buy-comics-digital-comics.png'
                 },
                 {
                     text: 'DC merchandise',
                     url: '#',
-                    current: true
+                    current: false,
+                    src: '../assets/img/buy-comics-digital-comics.png'                    
                 },
                 {
                     text: 'Subscription',
                     url: '#',
-                    current: false
+                    current: false,
+                    src: '../assets/img/buy-comics-digital-comics.png'
                 },
                 {
                     text: 'Comic shop locator',
                     url: '#',
-                    current: false
+                    current: false,
+                    src: '../assets/img/buy-comics-digital-comics.png'
                 },
                 {
                     text: 'DC power Visa',
                     url: '#',
-                    current: false
+                    current: false,
+                    src: '../assets/img/buy-comics-digital-comics.png'
                 }
                
             ]
