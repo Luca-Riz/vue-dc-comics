@@ -10,7 +10,7 @@
                 <ul>
                     <!-- <li v-for="(link,index) in links" :key="index" :class="{ active: link.current }"><a :href="link.url">{{ link.text }} </a></li> -->
                     <!-- oppure -->
-                    <li v-for="(link,index) in links" :key="index" :class="link.current ? 'active' : '' "><a :href="link.url">{{ link.text }} </a></li>
+                    <li v-for="(link,index) in links" :key="index" :class="link.current ? 'active' : '' "><a :class="link.current ? 'active' : '' " :href="link.url">{{ link.text }} </a></li>
                 </ul>
             </nav>
         </div>
@@ -93,7 +93,7 @@ header{
 
             &:hover,
             &.active {
-                border-bottom: 3px solid $blue-dc;
+                border-bottom: 5px solid $blue-dc;
             }
 
 
@@ -102,7 +102,7 @@ header{
                 text-transform: uppercase;     
                 color: black;
                 font-weight: 700;
-                line-height: calc(150px - (3px * 2)); //border *2
+                line-height: calc(150px - 5px); //border
                 
              &:hover,
              &.active {
