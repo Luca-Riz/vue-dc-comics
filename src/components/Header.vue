@@ -1,17 +1,19 @@
 <template>
     <header>
-        <a href="#">
-            <img src="@/assets/img/dc-logo.png" alt="logo dc">
-            <!-- oppure
-            <img src="../assets/images/logo.png" alt=""> -->
-        </a>
-        <nav>
-            <ul>
-                <!-- <li v-for="(link,index) in links" :key="index" :class="{ active: link.current }"><a :href="link.url">{{ link.text }} </a></li> -->
-                <!-- oppure -->
-                <li v-for="(link,index) in links" :key="index" :class="link.current ? 'active' : '' "><a :href="link.url">{{ link.text }} </a></li>
-            </ul>
-        </nav>
+        <div class="container header">
+            <a href="#">
+                <img src="@/assets/img/dc-logo.png" alt="logo dc">
+                <!-- oppure
+                <img src="../assets/images/logo.png" alt=""> -->
+            </a>
+            <nav>
+                <ul>
+                    <!-- <li v-for="(link,index) in links" :key="index" :class="{ active: link.current }"><a :href="link.url">{{ link.text }} </a></li> -->
+                    <!-- oppure -->
+                    <li v-for="(link,index) in links" :key="index" :class="link.current ? 'active' : '' "><a :href="link.url">{{ link.text }} </a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 </template>
 
@@ -80,29 +82,46 @@ export default {
 <style lang="scss" scoped>
 @import '../style/vars.scss';
 header{
-    text-align: center;
+
 
     ul {
         list-style: none;
 
         li {
             display: inline-block;
-            padding: 10px;
+            margin: 15px;
 
-            a {
-                color: $primary;
-                text-decoration: none;
-                font-size: $font_primary;
+            &:hover,
+            &.active {
+                border-bottom: 3px solid $blue-dc;
             }
 
+
+            a {                
+                text-decoration: none; 
+                text-transform: uppercase;     
+                color: black;
+                font-weight: 700;
+                line-height: calc(150px - (3px * 2)); //border *2
+                
              &:hover,
              &.active {
-                    background-color: lightgrey;
+                    color: $blue-dc;
              }
+            }
+
 
         }
 
     }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    //border: 1px solid black; !da togliere
 }
 
 </style>
