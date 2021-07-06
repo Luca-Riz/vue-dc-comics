@@ -120,7 +120,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 150px;
+    height: $std-height;
     //border: 1px solid black; !da togliere
 }
 
