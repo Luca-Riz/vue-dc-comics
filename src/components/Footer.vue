@@ -18,46 +18,51 @@
             <div class="container main-footer">
                 <!-- inizio main nav footer -->
                 <nav>
-                    <h4>Dc comics</h4>
-                    <ul>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                    </ul>
+                    
+                    <!-- inizio box singolo prodotto -->
+                    <div class="box-product">
+                        <h2>Dc comics</h2>
+                        <ul>
+                            <li v-for="(item,index) in dcComics" :key="index">
+                                <a :href="item.link"> {{item.text}} </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- fine box singolo prodotto -->
 
-                    <h4>Shop</h4>
-                    <ul>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                    </ul>
+                    <!-- inizio box singolo prodotto -->
+                    <div class="box-product">
+                        <h2>Shop</h2>
+                        <ul>
+                            <li v-for="(item,index) in shop" :key="index">
+                                <a :href="item.link"> {{item.text}} </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- fine box singolo prodotto -->
 
-                    <h4>Dc</h4>
-                    <ul>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                    </ul>
+                    <!-- inizio box singolo prodotto -->
+                    <div class="box-product">
+                        <h2>DC</h2>
+                        <ul>
+                            <li v-for="(item,index) in dc" :key="index">
+                                <a :href="item.link"> {{item.text}} </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- fine box singolo prodotto -->
 
-                    <h4>Sites</h4>
-                    <ul>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                        <li><a href="">Characters</a></li>
-                    </ul>
+                    <!-- inizio box singolo prodotto -->
+                    <div class="box-product">
+                        <h2>Sites</h2>
+                        <ul>
+                            <li v-for="(item,index) in sites" :key="index">
+                                <a :href="item.link"> {{item.text}} </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- fine box singolo prodotto -->
+
                 </nav>
                 <!-- fine main nav footer -->
 
@@ -122,15 +127,118 @@ export default {
                
             ],
 
-            // nav1: [
-            //     {text: Characters},
-            //     {text: Comics},
-            //     {text: Movies},
-            //     {text: TV},
-            //     {text: Games},
-            //     {text: Videos},
-            //     {text: News}
-            // ]
+            dcComics : [
+                {
+                    text : 'Characters',
+                    link : '#'
+                },
+                {
+                    text : 'Comics',
+                    link : '#'
+                },
+                {
+                    text : 'Movies',
+                    link : '#'
+                },
+                {
+                    text : 'TV',
+                    link : '#'
+                },
+                {
+                    text : 'Games',
+                    link : '#'
+                },
+                {
+                    text : 'Videos',
+                    link : '#'
+                },
+                {
+                    text : 'News',
+                    link : '#'
+                }
+            ],
+                
+            shop : [
+                {
+                    text : 'Shop DC',
+                    link : '#'
+                },
+                {
+                    text : 'Shop DC Collectibles',
+                    link : '#'
+                }
+            ],
+                
+            dc: [
+                {
+                    text : 'Terms Of Use',
+                    link : '#'
+                },
+                {
+                    text : 'Privacy policy (New)',
+                    link : '#'
+                },
+                {
+                    text : 'Ad Choices',
+                    link : '#'
+                },
+                {
+                    text : 'Advertising',
+                    link : '#'
+                },
+                {
+                    text : 'Jobs',
+                    link : '#'
+                },
+                {
+                    text : 'Subscriptions',
+                    link : '#'
+                },
+                {
+                    text : 'Talent Workshops',
+                    link : '#'
+                },
+                {
+                    text : 'CPSC Certificates',
+                    link : '#'
+                },
+                {
+                    text : 'Rating',
+                    link : '#'
+                },
+                {
+                    text : 'Shop Help',
+                    link : '#'
+                },
+                {
+                    text : 'Contact Us',
+                    link : '#'
+                }
+            ],
+                
+            sites : [
+                {
+                    text : 'DC',
+                    link : '#'
+                },
+                {
+                    text : 'MAD Magazine',
+                    link : '#'
+                },
+                {
+                    text : 'DC Kids',
+                    link : '#'
+                },
+                {
+                    text : 'DC Universe',
+                    link : '#'
+                },
+                {
+                    text : 'DC Power Visa',
+                    link : '#'
+                }
+            ]
+                
 
         }
     }
@@ -170,27 +278,52 @@ export default {
 
 .main-main-footer {
     background-image: url("../assets/img/footer-bg.jpg");
-    // height: 500px; //! da togliere
+    height: 450px; //! da togliere
     color: white;
+    display: flex;
 
-        h4 {
-            padding: 10px 0;
-            text-transform: uppercase; 
-        }
-        ul {
-            list-style: none;
-            
-            a {                
-                text-decoration: none; 
-                color: white;
-                font-weight: 300;                      
+        .main-footer {
+            height: 100%;
+
+            nav {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-content: flex-start;
+                flex-wrap: wrap;
+
+                .box-product {
+                    // border: 1px solid red;
+                    display: inline-block;
+                    margin-right: 1.5rem;
+
+                    h2 {
+                        padding: 1.25rem 0;
+                        text-transform: uppercase; 
+                    }
+
+                    ul {
+                        list-style: none;
+
+                        li {
+                            padding: 0.25rem 0;
+                        }
+                        
+                        a {                
+                            text-decoration: none; 
+                            color: lightgrey;
+                            font-weight: 300;                      
+                        }
+                    }
                 }
+
+            }
+        }
 }
 
 .main-bottom {
     height: $std-height;
     background-color: $grey-dc;
-    }
 }
 
 </style>
