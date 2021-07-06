@@ -17,7 +17,48 @@
         <div class="main-main-footer">
             <div class="container main-footer">
                 <!-- inizio main nav footer -->
-                <nav></nav>
+                <nav>
+                    <h4>Dc comics</h4>
+                    <ul>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                    </ul>
+
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                    </ul>
+
+                    <h4>Dc</h4>
+                    <ul>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                    </ul>
+
+                    <h4>Sites</h4>
+                    <ul>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                        <li><a href="">Characters</a></li>
+                    </ul>
+                </nav>
                 <!-- fine main nav footer -->
 
                 <!-- logo main footer -->
@@ -52,6 +93,7 @@ export default {
                     url: '#',
                     current: false,
                     src: '../assets/img/buy-comics-digital-comics.png'
+                    //! da sistemare tutti url
                 },
                 {
                     text: 'DC merchandise',
@@ -78,7 +120,18 @@ export default {
                     src: '../assets/img/buy-comics-digital-comics.png'
                 }
                
-            ]
+            ],
+
+            // nav1: [
+            //     {text: Characters},
+            //     {text: Comics},
+            //     {text: Movies},
+            //     {text: TV},
+            //     {text: Games},
+            //     {text: Videos},
+            //     {text: News}
+            // ]
+
         }
     }
 }
@@ -105,7 +158,6 @@ export default {
                     margin: 15px;
                     }
 
-
                 a {                
                     text-decoration: none; 
                     text-transform: uppercase;     
@@ -118,14 +170,27 @@ export default {
 
 .main-main-footer {
     background-image: url("../assets/img/footer-bg.jpg");
-    height: 500px; //! da togliere
+    // height: 500px; //! da togliere
+    color: white;
+
+        h4 {
+            padding: 10px 0;
+            text-transform: uppercase; 
+        }
+        ul {
+            list-style: none;
+            
+            a {                
+                text-decoration: none; 
+                color: white;
+                font-weight: 300;                      
+                }
 }
 
 .main-bottom {
     height: $std-height;
     background-color: $grey-dc;
+    }
 }
-
-
 
 </style>
