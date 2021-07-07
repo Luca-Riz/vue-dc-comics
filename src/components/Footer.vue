@@ -408,10 +408,14 @@ export default {
         .right {
             display: flex;
             justify-content: flex-end;
+            align-items: center;
+            text-transform: uppercase; 
     
             .blue{
                 color: $blue-dc;
                 padding: 10px;
+                font-weight: 600;
+
             }
 
             .social {
