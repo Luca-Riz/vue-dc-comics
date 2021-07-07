@@ -127,14 +127,37 @@ export default {
 
     .products {
         height: 100%;
+        position: relative;
+        text-align: center;
 
         .current {
             color: white;
+            text-transform: uppercase;
+            background-color: $blue-dc;
+            display: inline-block;
+            padding: 0.75rem 1rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            position: absolute;
+            top: calc(-3rem / 2);
+            left: 0;
+            cursor: pointer;
         }
 
         .products-area{
             display: flex;
             flex-wrap: wrap;
+        }
+
+        .load-more {
+            color: white;
+            text-transform: uppercase;
+            background-color: $blue-dc;
+            display: inline-block;
+            padding: 0.5rem 5rem;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 1rem;    
         }
         
     }

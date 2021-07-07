@@ -8,10 +8,10 @@
 </template>
 
 <script>
-export default {
+    export default {
     name: 'ProductCard',
     props: ["prod"]
-}
+    }
 </script>
 
 <style lang="scss" scoped>
