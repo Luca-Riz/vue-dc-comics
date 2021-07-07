@@ -8,7 +8,7 @@
             <div class="current">Current series</div>
 
             <div class="products-area">
-                <!-- inserisco richiamo -->
+                <!-- passo i dati a ProductCard -->
                 <ProductCard :key="index" v-for="(prod,index) in products" 
                 :prod="prod" /> 
             </div>
