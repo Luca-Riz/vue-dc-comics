@@ -4,7 +4,7 @@
         <div class="main-top">
             <div class="container footer-top">
                 <ul>
-                    <li v-for="(link,index) in links" :key="index">
+                    <li class="nav-footer" v-for="(link,index) in links" :key="index">
                         <img :src="link.src" alt="#">
                         <a :href="link.url"> {{ link.text }} </a>
                     </li>
@@ -306,11 +306,21 @@ export default {
         align-items: center;
 
             ul {
+                width: 100%;
                 list-style: none;
+                display: flex;
+                justify-content: space-between;
 
                 li {
                     display: inline-block;
                     margin: 15px;
+                    display: flex;
+                    align-items: center;
+
+                        img {
+                            height: 3rem;
+                            margin-right: 1rem;
+                        }
                     }
 
                 a {                
