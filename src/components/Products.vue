@@ -1,8 +1,19 @@
 <template>
     <div class="all-width">
+        <div class="jumbotron">
+            <img src="../assets/img/jumbotron.jpg" alt="">
+        </div>
         <div class="container products">
 
-            Content goes here
+            <div class="current">Current series</div>
+
+            <div class="products-area">
+                <!-- inserisco richiamo -->
+                <ProductCard /> 
+            </div>
+
+            <div class="load-more">Load more</div>
+            
         </div>
     </div>
 
@@ -21,14 +32,25 @@ export default {
 
 .all-width {
     background-color: black;
-    height: $std-height;
+
+    .jumbotron {
+        height: 400px;
+        overflow: hidden;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .products {
+        height: 100%;
+
+        .current {
+            color: white;
+        }
+        
+    }
 }
 
-.products {
-    height: 100%;
-    color: white;
-    display: flex;
-    align-items: center;
-}
 
 </style>
