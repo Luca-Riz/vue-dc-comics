@@ -18,7 +18,7 @@
 
     .product-card {
         width: calc(100% / 12 * 2);
-        padding: 3rem 1rem;
+        padding: 3rem 1rem 1rem 1rem;
 
         .img-div {
             height: 200px;
