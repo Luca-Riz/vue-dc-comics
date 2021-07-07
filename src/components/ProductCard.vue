@@ -29,6 +29,7 @@
             color:white;
             text-transform: uppercase;
             padding-top: 1rem;
+            text-align: left;
         }
     }
 
