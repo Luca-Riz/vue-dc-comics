@@ -12,6 +12,7 @@
     name: 'ProductCard',
     props: ["prod"]
     }
+
 </script>
 
 <style lang="scss" scoped>
