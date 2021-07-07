@@ -119,6 +119,8 @@ export default {
     .jumbotron {
         height: 400px;
         overflow: hidden;
+        text-align: center;
+
         img{
             max-width: 100%;
             height: auto;
