@@ -81,7 +81,7 @@
             <div class="container bottom-footer">
 
                 <!-- inizio footer bottom left -->
-                <div class="left">
+                <div class="left pointer">
                     Sign-up now!
                 </div>
                 <!-- fine footer bottom left -->
@@ -116,32 +116,31 @@ export default {
                     text: 'Digital comics',
                     url: '#',
                     current: false,
-                    src: '../assets/img/buy-comics-digital-comics.png'
-                    //! da sistemare tutti url
+                    src: require('../assets/img/buy-comics-digital-comics.png'),
                 },
                 {
                     text: 'DC merchandise',
                     url: '#',
                     current: false,
-                    src: '../assets/img/buy-comics-digital-comics.png'                    
+                    src: require('../assets/img/buy-comics-merchandise.png')                    
                 },
                 {
                     text: 'Subscription',
                     url: '#',
                     current: false,
-                    src: '../assets/img/buy-comics-digital-comics.png'
+                    src: require('../assets/img/buy-comics-subscriptions.png'),
                 },
                 {
                     text: 'Comic shop locator',
                     url: '#',
                     current: false,
-                    src: '../assets/img/buy-comics-digital-comics.png'
+                    src: require('../assets/img/buy-comics-shop-locator.png')
                 },
                 {
                     text: 'DC power Visa',
                     url: '#',
                     current: false,
-                    src: '../assets/img/buy-comics-digital-comics.png'
+                    src: require('../assets/img/buy-dc-power-visa.svg')
                 }
                
             ],
@@ -260,27 +259,27 @@ export default {
 
             social: [
                 {
-                    src: '../assets/img/footer-facebook.png',
+                    src: require('../assets/img/footer-facebook.png'),
                     link: '#',
                     alt: 'facebook logo'
                 },
                 {
-                    src: '../assets/img/footer-twitter.png',
+                    src: require('../assets/img/footer-twitter.png'),
                     link: '#',
                     alt: 'twitter logo'
                 },
                 {
-                    src: '../assets/img/footer-youtube.png',
+                    src: require('../assets/img/footer-youtube.png'),
                     link: '#',
                     alt: 'youtube logo'
                 },
                 {
-                    src: '../assets/img/footer-pinterest.png',
+                    src: require('../assets/img/footer-pinterest.png'),
                     link: '#',
                     alt: 'pinterest logo'
                 },
                 {
-                    src: '../assets/img/footer-periscope.png',
+                    src: require('../assets/img/footer-periscope.png'),
                     link: '#',
                     alt: 'periscope logo'
                 },
@@ -393,6 +392,7 @@ export default {
             padding: 15px;
             display: inline-block;
             border: 3px solid $blue-dc;
+            cursor: pointer;
         }
     
         .right {
