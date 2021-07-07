@@ -9,7 +9,9 @@
 
             <div class="products-area">
                 <!-- inserisco richiamo -->
-                <ProductCard /> 
+                <ProductCard 
+                
+                /> 
             </div>
 
             <div class="load-more">Load more</div>
@@ -21,9 +23,15 @@
 
 <script>
 export default {
-    name: 'Header',
-
-    // data() {}
+    name: 'Products',
+    components: {
+        ProductCard
+    },
+    data(){
+        return {
+            products: ProdItems,
+        }
+    }
 }
 </script>
 
